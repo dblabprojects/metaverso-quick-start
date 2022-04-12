@@ -1,8 +1,7 @@
-# A-Frame Project
+# METAVERSO QUICK START - 2a EDIÇÃO
+## Criando em Realidade Aumentada
+### Leonardo Azzi Martins, José Rodolfo Masiero e Plínio Ricardo Gonçalves
 
-**[Subscribe to the A-Frame newsletter!](https://aframe.io/subscribe/)**
-
-**[Sponsor us to help support A-Frame development and its community](https://github.com/sponsors/dmarcos)**
 
 Built with [A-Frame](https://aframe.io), a web framework for building virtual reality experiences.
 
