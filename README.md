@@ -15,3 +15,4 @@ exemplo2.html
 
 Referências:
 https://aframe.io/docs/1.3.0/introduction/
+https://github.com/networked-aframe/networked-aframe#getting-started
