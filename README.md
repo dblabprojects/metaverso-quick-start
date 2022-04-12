@@ -11,3 +11,7 @@ Click and drag on desktop. Open it on a smartphone and use the device motion sen
 
 exemplo2.html
 - https://aframe.io/docs/1.3.0/introduction/interactions-and-controllers.html
+
+
+Referências:
+https://aframe.io/docs/1.3.0/introduction/
