@@ -14,7 +14,8 @@ Setup
 
 - Para usuários de iOS: baixar WebXR Viewer na App Store.
 https://apps.apple.com/us/app/webxr-viewer/id1295998056
-- Para usuários Deskop: recomendamos o uso do Mozilla Firefox :)
+- Para usuários Android: recomendamos o uso do Google Chrome ou Mozilla Firefox
+- Para usuários Deskop: recomendamos o uso do Mozilla Firefox ou Chromium :)
 
 exemplo2.html
 
@@ -22,5 +23,5 @@ exemplo2.html
 
 Referências:
 https://aframe.io/
-
+https://aframe.io/aframe-school
 https://aframe.io/docs/1.3.0/introduction/
