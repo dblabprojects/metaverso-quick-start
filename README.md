@@ -4,22 +4,19 @@
 
 ### Leonardo Azzi Martins, José Rodolfo Masiero e Plínio Ricardo Gonçalves
 
-Contruindo com [A-Frame](https://aframe.io) uma estrutura da Web para criar experiências de realidade virtual.
+Contruído com [A-Frame](https://aframe.io), um framework Web para criar experiências de realidade virtual.
 
-Faça WebVR com HTML e Entity-Component. Funciona nas plataformas Vive, Rift, Quest, desktop, mobile.
+Crie em WebXR com HTML e Entity-Component. Funciona nas plataformas Vive, Rift, Quest, desktop ou mobile.
 
-Clique e arraste na área de trabalho. Abra-o em um smartphone e use os sensores de movimento do dispositivo. Ou [plug no VR headset](https://aframe.io/docs/0.8.0/introduction/vr-headsets-and-webvr-browsers.html)!
+Abra-o em um smartphone e use os sensores de movimento do dispositivo. Ou [use em um VR headset](https://aframe.io/docs/0.8.0/introduction/vr-headsets-and-webvr-browsers.html)!
 
 Setup
 
-- Para usuários de iOS: baixar WebXR Viewer na App Store.
-  https://apps.apple.com/us/app/webxr-viewer/id1295998056
+- Para usuários de iOS: baixar [WebXR Viewer](https://apps.apple.com/us/app/webxr-viewer/id1295998056) na App Store.
+  
 - Para usuários Android: recomendamos o uso do Google Chrome ou Mozilla Firefox
-- Para usuários Deskop: recomendamos o uso do Mozilla Firefox ou Chromium :)
+- Para usuários Deskop: recomendamos o uso do Mozilla Firefox ou Chrome/Chromium :)
 
-exemplo2.html
-
-- https://aframe.io/docs/1.3.0/introduction/interactions-and-controllers.html
 
 Referências:
 
@@ -30,3 +27,4 @@ https://aframe.io/docs/1.3.0/guides/
 https://aframe.io/docs/1.3.0/core/
 https://aframe.io/docs/1.3.0/components/
 https://aframe.io/docs/1.3.0/primitives/
+https://aframe.io/docs/1.3.0/introduction/interactions-and-controllers.html
