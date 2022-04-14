@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>360&deg; Image Gallery</title>
+    <!-- IMPORTA O A-FRAME E OS COMPONENTES NECESSARIOS -->
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
@@ -12,7 +13,9 @@
     <script src="components/set-image.js"></script>
   </head>
   <body>
+    <!-- CONJUNTO DA CENA -->
     <a-scene>
+       <!-- DEFININDO O GERENCIADOR DE ARQUIVOS "ASSETS" PARA ADCIONAR IMAGENS/VIDEOS/OBJETOS 3D -->
       <a-assets>
         
         <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
@@ -23,7 +26,7 @@
         <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
         <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
 
-        <!-- Image link template to be reused. -->
+         <!-- MODELO DE LINK DE IMAGEM A SER REUTILIZADO -->
         <script id="link" type="text/html">
           <a-entity class="link"
             geometry="primitive: plane; height: 1; width: 1"
@@ -36,11 +39,11 @@
             sound="on: click; src: #click-sound"></a-entity>
         </script>
         <script>
-          /* global AFRAME */
+          /* AFRAME GLOBAL */
 
 /**
- * Component that listens to an event, fades out an entity, swaps the texture, and fades it
- * back in.
+ * COMPONENTE QUE SELECIONA UM EVENTO, ESMAECE UMA ENTIDADE, TROCA A TEXTURA E A DESVANECE
+ * DE VOLTA.
  */
 AFRAME.registerComponent('set-image', {
   schema: {
@@ -57,28 +60,28 @@ AFRAME.registerComponent('set-image', {
     this.setupFadeAnimation();
 
     el.addEventListener(data.on, function () {
-      // Fade out image.
+      // DESAPARECENDO A IMAGEM
       data.target.emit('set-image-fade');
-      // Wait for fade to complete.
+      // AGUARDANDO A CONCLUSÃO DO 
       setTimeout(function () {
-        // Set image.
+        // DEFININDO A IMAGEM
         data.target.setAttribute('material', 'src', data.src);
       }, data.dur);
     });
   },
 
   /**
-   * Setup fade-in + fade-out.
+   * CONFIRUCACAO DA MUDANCA DA INSERSAO FADE-IN + FADE-OUT.
    */
   setupFadeAnimation: function () {
     var data = this.data;
     var targetEl = this.data.target;
 
-    // Only set up once.
+    // CONFIGURANDO APENAS UMA VEZ
     if (targetEl.dataset.setImageFadeSetup) { return; }
     targetEl.dataset.setImageFadeSetup = true;
 
-    // Create animation.
+    // CRIANDO A ANIMACAO
     targetEl.setAttribute('animation__fade', {
       property: 'material.color',
       startEvents: 'set-image-fade',
@@ -93,15 +96,15 @@ AFRAME.registerComponent('set-image', {
         
       </a-assets>
       
-            <!-- Camera + cursor. -->
+            <!-- CAMERA + CURSOR -->
       <a-camera>
         <a-cursor id="cursor"></a-cursor>
       </a-camera>
 
-      <!-- 360-degree image. -->
+      <!-- IMAGEM DE 360 GRAUS -->
       <a-sky id="image-360" radius="10" src="#city"></a-sky>
 
-      <!-- Image links. -->
+      <!-- LINKS DAS IMAGENS -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
         <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
