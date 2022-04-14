@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>360&deg; Image Gallery</title>
     <!-- IMPORTA O A-FRAME E OS COMPONENTES NECESSARIOS -->
-    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <meta name="description" content="360&deg; Image Gallery - A-Frame" />
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
@@ -15,19 +15,55 @@
   <body>
     <!-- CONJUNTO DA CENA -->
     <a-scene>
-       <!-- DEFININDO O GERENCIADOR DE ARQUIVOS "ASSETS" PARA ADCIONAR IMAGENS/VIDEOS/OBJETOS 3D -->
+      <!-- DEFININDO O GERENCIADOR DE ARQUIVOS "ASSETS" PARA ADCIONAR IMAGENS/VIDEOS/OBJETOS 3D -->
       <a-assets>
-        <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-        <img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
-        <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
-        <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
-        <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-        <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-        <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+         <!-- IMPORTANDO A IMAGEM DA CIDADE -->
+        <img
+          id="city"
+          crossorigin="anonymous"
+          src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg"
+        />
+         <!-- IMPORTANDO O THUMB DA CIDADE -->
+        <img
+          id="city-thumb"
+          crossorigin="anonymous"
+          src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg"
+        />
+         <!-- IMPORTANDO O THUMB DOS CUBOS -->
+        <img
+          id="cubes-thumb"
+          crossorigin="anonymous"
+          src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg"
+        />
+         <!-- IMPORTANDO O THUMB DO SECHELT -->
+        <img
+          id="sechelt-thumb"
+          crossorigin="anonymous"
+          src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg"
+        />
+        <!-- IMPORTANDO O AUDIO DO CLICK DO COMPONENTE -->
+        <audio
+          id="click-sound"
+          crossorigin="anonymous"
+          src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"
+        ></audio>
+        <!-- IMPORTANDO OS CUBOS  -->
+        <img
+          id="cubes"
+          crossorigin="anonymous"
+          src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg"
+        />
+        <!-- IMPORTANDO SECHELT  -->
+        <img
+          id="sechelt"
+          crossorigin="anonymous"
+          src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"
+        />
 
         <!-- MODELO DE LINK DE IMAGEM A SER REUTILIZADO -->
         <script id="link" type="text/html">
-          <a-entity class="link"
+          <a-entity
+            class="link"
             geometry="primitive: plane; height: 1; width: 1"
             material="shader: flat; src: ${thumb}"
             event-set__1="_event: mousedown; scale: 1 1 1"
@@ -35,7 +71,8 @@
             event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
             event-set__4="_event: mouseleave; scale: 1 1 1"
             set-image="on: click; target: #image-360; src: ${src}"
-            sound="on: click; src: #click-sound"></a-entity>
+            sound="on: click; src: #click-sound"
+          ></a-entity>
         </script>
       </a-assets>
 
@@ -44,9 +81,21 @@
 
       <!-- LINKS DAS IMAGENS -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
-        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+        <a-entity
+          template="src: #link"
+          data-src="#cubes"
+          data-thumb="#cubes-thumb"
+        ></a-entity>
+        <a-entity
+          template="src: #link"
+          data-src="#city"
+          data-thumb="#city-thumb"
+        ></a-entity>
+        <a-entity
+          template="src: #link"
+          data-src="#sechelt"
+          data-thumb="#sechelt-thumb"
+        ></a-entity>
       </a-entity>
     </a-scene>
   </body>
