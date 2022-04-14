@@ -8,7 +8,9 @@
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
   </head>
   <body>
+    <!-- CONJUNTO DA CENA -->
     <a-scene>
+      <!-- CUBO -->
       <a-box
         position="-1 0.5 -3"
         rotation="0 45 0"
@@ -16,7 +18,7 @@
         event-set__enter="_event: mouseenter; color: #8FF7FF"
         event-set__leave="_event: mouseleave; color: #4CC3D9"
       ></a-box>
-
+      <!-- ESFERA -->
       <a-sphere
         position="0 1.25 -5"
         radius="1.25"
@@ -25,7 +27,7 @@
         event-set__up="_event: mouseup; scale: 1 1 1"
         event-set__leave="_event: mouseleave; scale: 1 1 1"
       ></a-sphere>
-
+      <!-- CILINDRO -->
       <a-cylinder
         position="1 0.75 -3"
         radius="0.5"
@@ -34,6 +36,7 @@
         event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
         event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false"
       >
+        <!-- TEXTO -->
         <a-text
           id="cylinderText"
           value="This is a cylinder"
@@ -45,7 +48,7 @@
           material="color: #333"
         ></a-text>
       </a-cylinder>
-
+      <!-- CHÃO = PLANO -->
       <a-plane
         position="0 0 -4"
         rotation="-90 0 0"
@@ -56,11 +59,11 @@
         event-set__up="_event: mouseup; material.wireframe: false"
         event-set__leave="_event: moulseleave; material.wireframe: false"
       ></a-plane>
-      l
+      <!-- CÂMERA -->
       <a-camera>
         <a-cursor></a-cursor>
       </a-camera>
-
+      <!-- CÉU -->
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
