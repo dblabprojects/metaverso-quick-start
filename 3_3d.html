@@ -15,40 +15,29 @@ DBServer Assessoria de Sistemas de Informação LTDA
   <body>
     <!-- CONJUNTO DA CENA -->
     <a-scene>
-      <!-- Definindo o gerenciador de arquivos "Assets" para adcionar imagens -->
+      <!-- Definindo o gerenciador de arquivos "Assets" para adcionar o elemento 3d -->
       <a-assets>
-        <img
-          id="imagem1"
-          src="https://cdn.glitch.global/a8822043-5948-448f-b273-e07c6ce381ab/db.png?v=1649936673418"
-        />
-        <img
-          id="imagem2"
-          src="https://cdn.glitch.global/a8822043-5948-448f-b273-e07c6ce381ab/dblab.png?v=1649936687377"
-        />
+        <a-asset-item
+          id="robo"
+          src="https://cdn.aframe.io/test-models/models/glTF-2.0/brainstem/BrainStem.gltf"
+        ></a-asset-item>
       </a-assets>
 
       <!-- CÂMERA -->
       <a-camera position="0 1.2 0">
         <a-cursor></a-cursor>
       </a-camera>
-      
+
       <!-- CÉU -->
       <a-sky color="#ECECEC" hide-on-enter-ar></a-sky>
       <!-- ADICIONAR IMAGEM NO CÉU -->
 
-      <!-- adicionando imagem na cena -->
-      <a-image
-        src="#imagem1"
-        position="0 1.6 -3"
-        height="1"
-        width="2"
-      ></a-image>
-      <a-image
-        src="#imagem2"
-        position="3 1.6 -3"
-        height="1"
-        width="2"
-      ></a-image>
+      <!-- adicionando o elemento 3d na cena -->
+      <a-gltf-model
+        src="#robo"
+        position="0 0 -3"
+        scale="1 1 1"
+      ></a-gltf-model>
     </a-scene>
   </body>
 </html>
