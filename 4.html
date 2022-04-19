@@ -29,11 +29,13 @@ EXEMPLO 4: OBJETOS 3D PARA A WEB (.GLTF/.GLB)
           id="imagem2"
           src="https://cdn.glitch.global/a8822043-5948-448f-b273-e07c6ce381ab/dblab.png?v=1649936687377"
         />
+        
         <!-- IMPORTA O OBJETO 3D -->
         <a-asset-item
           id="robo"
           src="https://cdn.glitch.global/a8822043-5948-448f-b273-e07c6ce381ab/plinio-bot_dance2.glb?v=1649947255301"
         ></a-asset-item>
+        
       </a-assets>
 
       <!-- CÂMERA -->
@@ -43,6 +45,14 @@ EXEMPLO 4: OBJETOS 3D PARA A WEB (.GLTF/.GLB)
 
       <!-- CÉU -->
       <a-sky color="#ECECEC" hide-on-enter-ar></a-sky>
+      
+      <!-- ADICIONANDO OBJETO 3D A CENA -->
+      <a-gltf-model
+        src="#robo"
+        position="2.4 0.5 -3"
+        scale="1 1 1"
+        animation-mixer
+      ></a-gltf-model>
       
       <a-image
         src="#imagem1"
@@ -63,13 +73,7 @@ EXEMPLO 4: OBJETOS 3D PARA A WEB (.GLTF/.GLB)
         color="blue"
         align="center"
       ></a-text>
-      <!-- ADICIONANDO OBJETO 3D A CENA -->
-      <a-gltf-model
-        src="#robo"
-        position="2.4 0.5 -3"
-        scale="1 1 1"
-        animation-mixer
-      ></a-gltf-model>
+
     </a-scene>
   </body>
 </html>
