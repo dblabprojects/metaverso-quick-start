@@ -17,7 +17,7 @@ EXEMPLO 2: IMAGEM
   <body>
     <!-- CONJUNTO DA CENA -->
     <a-scene>
-       <!-- DEFININDO O GERENCIADOR DE ARQUIVOS "ASSETS" PARA ADCIONAR IMAGENS/VIDEOS/OBJETOS 3D -->
+      <!-- DEFININDO O GERENCIADOR DE ARQUIVOS "ASSETS" PARA ADCIONAR IMAGENS/VIDEOS/OBJETOS 3D -->
       <a-assets>
         <!-- IMPORTA A PRIMEIRA IMAGEM -->
         <img
@@ -35,24 +35,25 @@ EXEMPLO 2: IMAGEM
       <a-camera position="0 1.2 0">
         <a-cursor></a-cursor>
       </a-camera>
-      
+
       <!-- CÉU -->
       <a-sky color="#ECECEC" hide-on-enter-ar></a-sky>
-      <!-- ADICIONAR IMAGEM NO CÉU -->
 
-      <!-- ADICIONANDO IMAGENS A CENA -->
-      <a-image
-        src="#imagem1"
-        position="0 0.5 -3"
-        height="2"
-        width="2"
-      ></a-image>
-      <a-image
-        src="#imagem2"
-        position="0 2 -3"
-        height="1"
-        width="2"
-      ></a-image>
+      <a-entity position="0 1 0">
+        <!-- ADICIONANDO IMAGENS A CENA -->
+        <a-image
+          src="#imagem1"
+          position="0 0.5 -3"
+          height="2"
+          width="2"
+        ></a-image>
+        <a-image
+          src="#imagem2"
+          position="0 2 -3"
+          height="1"
+          width="2"
+        ></a-image>
+      </a-entity>
     </a-scene>
   </body>
 </html>

@@ -77,7 +77,9 @@ EXEMPLO 5: ANIMAÇÃO
         color="purple"
       ></a-cylinder>
       
+      
       <a-entity position="0 1 0">
+        <!-- ADICIONANDO IMAGENS A CENA -->
         <a-image
           src="#imagem1"
           position="4 0.5 -3"
@@ -90,6 +92,7 @@ EXEMPLO 5: ANIMAÇÃO
           height="1"
           width="2"
         ></a-image>
+        
         <!-- ADICIONANDO O TEXTO -->
         <a-text
           value="Metaverso Quick Start"
@@ -97,10 +100,11 @@ EXEMPLO 5: ANIMAÇÃO
           color="blue"
           align="center"
         ></a-text>
+        
         <!-- ADICIONANDO OBJETO 3D A CENA COM ANIMACAO -->
         <a-gltf-model
           src="#robo"
-          position="-3 0 -3"
+          position="-3 -0.5 -3"
           scale="1 1 1"
           animation-mixer
         ></a-gltf-model>
